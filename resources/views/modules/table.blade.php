@@ -14,14 +14,26 @@
             <tr>
                 <th scope="row">{{$key}}</th>
                 <td>{{$value->name}}</td>
+<<<<<<< HEAD
                 <td>{{$value->validator}}</td>
+=======
+                <td>{{$value->template}}</td>
+>>>>>>> 0.0.2
             </tr>
             @endforeach
         </tbody>
     </table>
 </div>
 @else
+<<<<<<< HEAD
     <p class="text-center">Вы пока не добавили хотя бы одну модель...</p>
+=======
+<div class="container">
+    <div class="alert alert-danger" style="margin-top: 25px;">
+        <p class="text-center">Вы пока не добавили хотя бы одну модель...</p>
+    </div>
+</div>
+>>>>>>> 0.0.2
 @endif
 
 <!--show table device-->
@@ -47,5 +59,13 @@
     </table>
 </div>
 @else
+<<<<<<< HEAD
     <p class="text-center">Вы пока не добавили хотя бы одно устройство...</p>
+=======
+<div class="container">
+    <div class="alert alert-danger">
+        <p class="text-center">Вы пока не добавили хотя бы одно устройство...</p>
+    </div>
+</div>
+>>>>>>> 0.0.2
 @endif

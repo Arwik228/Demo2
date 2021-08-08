@@ -43,17 +43,36 @@
 
     <!--ajax navigation or request-->
     <script>
+<<<<<<< HEAD
         var timeout;
 
         function addModel(){
             let name = document.getElementById('nameModel').value
             let validator = document.getElementById('validator').value
             fetch(`/api/model/${validator}/${name}`).then((data) => {
+=======
+        var timeout
+
+        function addModel() {
+            let name = (document.getElementById('nameModel').value).trim()
+            let template = (document.getElementById('template').value).trim()
+            fetch('/api/model', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name,
+                    template
+                })
+            }).then((data) => {
+>>>>>>> 0.0.2
                 return data.json()
             }).then((data) => {
                 renderMessage(data.message)
             })
         }
+<<<<<<< HEAD
         
         function renderMessage(m){
             let block = document.getElementById("alert");
@@ -75,6 +94,54 @@
                 document.getElementById("app").innerHTML = `find: ${data.value}` //----------
             })
         })
+=======
+
+        function addDevice() {
+            let model = document.getElementById('select').value
+            let serial = document.getElementById('textarea').value
+            fetch('/api/device', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    model,
+                    serial
+                })
+            }).then((data) => {
+                return data.json()
+            }).then((data) => {
+                renderMessage(data.message)
+            })
+        }
+
+        document.getElementById('search-button').addEventListener('click', () => {
+            let serial = (document.getElementById("search").value).trim();
+            fetch('/api/find', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    serial
+                })
+            }).then((data) => {
+                return data.json()
+            }).then((data) => {
+                alert(data.message);
+            })
+        })
+
+        function renderMessage(m) {
+            let block = document.getElementById("alert")
+            clearTimeout(timeout)
+            block.innerText = m
+            block.style.display = 'block'
+            timeout = setTimeout(() => {
+                block.style.display = 'none'
+            }, 2500)
+        }
+>>>>>>> 0.0.2
     </script>
 </body>
 

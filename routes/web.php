@@ -1,6 +1,9 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\MainController;
+=======
+>>>>>>> 0.0.2
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +22,8 @@ Route::get('/{page?}', function ($page = 'index') {
         return view('default')->with('page', $page);
     }
     abort(404);
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 0.0.2
