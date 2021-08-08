@@ -7,11 +7,11 @@
             <div class="mb-3">
                 <select class="form-control" id="select">
                     @if(count($devices))
-                        @foreach($devices as $value)
-                            <option value="{{$value->id}}">{{$value->name}}</option>
-                        @endforeach
+                    @foreach($devices as $value)
+                    <option value="{{$value->id}}">{{$value->name}}</option>
+                    @endforeach
                     @else
-                        <option selected>Для начала нужно добавить модель (1+)</option>
+                    <option selected>Для начала нужно добавить модель (1+)</option>
                     @endif
                 </select>
             </div>

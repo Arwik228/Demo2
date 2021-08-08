@@ -14,7 +14,6 @@ class MainController extends Controller
                 return view('modules/device')->with('devices', $this->tables()['model']);
             case 'model':
                 return view('modules/model');
-
             default:
                 return view('modules/table')->with('array', $this->tables());
         }
@@ -128,5 +127,4 @@ class MainController extends Controller
         })->get();
         return ['model' => $model, 'device' => $device];
     }
-
 }

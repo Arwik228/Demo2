@@ -17,15 +17,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::post('/find', function(Request $request){
+Route::post('/find', function (Request $request) {
     return MainController::find($request->json()->all());
 });
 
-Route::post('/model', function(Request $request){
+Route::post('/model', function (Request $request) {
     return MainController::createModel($request->json()->all());
 });
 
-Route::post('/device', function(Request $request){
+Route::post('/device', function (Request $request) {
     return MainController::createDevice($request->json()->all());
 });
-
