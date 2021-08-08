@@ -1,9 +1,4 @@
 <?php
-
-<<<<<<< HEAD
-use App\Http\Controllers\MainController;
-=======
->>>>>>> 0.0.2
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,12 +13,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/{page?}', function ($page = 'index') {
-    if(in_array($page,['index','device','model'])){
+    if (in_array($page, ['index', 'device', 'model'])) {
         return view('default')->with('page', $page);
     }
     abort(404);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 0.0.2

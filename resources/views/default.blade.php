@@ -43,14 +43,6 @@
 
     <!--ajax navigation or request-->
     <script>
-<<<<<<< HEAD
-        var timeout;
-
-        function addModel(){
-            let name = document.getElementById('nameModel').value
-            let validator = document.getElementById('validator').value
-            fetch(`/api/model/${validator}/${name}`).then((data) => {
-=======
         var timeout
 
         function addModel() {
@@ -66,35 +58,11 @@
                     template
                 })
             }).then((data) => {
->>>>>>> 0.0.2
                 return data.json()
             }).then((data) => {
                 renderMessage(data.message)
             })
         }
-<<<<<<< HEAD
-        
-        function renderMessage(m){
-            let block = document.getElementById("alert");
-            clearTimeout(timeout)
-            block.innerText = m
-            block.style.display = 'block'
-            timeout = setTimeout(() => {
-                block.style.display = 'none'
-            }, 2500);
-
-
-        }
-
-        document.getElementById('search-button').addEventListener('click', () => {
-            let serial = document.getElementById("search").value;
-            fetch(`/api/find/${serial}`).then((data) => {
-                return data.json()
-            }).then((data) => {
-                document.getElementById("app").innerHTML = `find: ${data.value}` //----------
-            })
-        })
-=======
 
         function addDevice() {
             let model = document.getElementById('select').value
@@ -141,7 +109,6 @@
                 block.style.display = 'none'
             }, 2500)
         }
->>>>>>> 0.0.2
     </script>
 </body>
 
