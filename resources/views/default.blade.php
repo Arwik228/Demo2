@@ -11,7 +11,7 @@
     <title>Demo2 by Laravel</title>
 </head>
 
-<body>
+<body style="background: #f3f3f3;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">PhP demo2</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
